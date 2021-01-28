@@ -29,20 +29,24 @@ public class JwtTokenUtil {
     }
 
     //根据负载生成 jwt token
-    private String generateToken(Map<String, Object> claim) {
+    private String generateToken(Map<String, Object> claims) {
         return Jwts.builder()
-                .setClaims(claim)
+                .setClaims(claims)
                 .setExpiration(generateExpirationDate())
-                .signWith(SignatureAlgorithm.ES512, secret)
+                .signWith(SignatureAlgorithm.HS512, secret)
                 .compact();
     }
 
     //从token中获取登录用户名
     public String getUserNameFromToken(String token) {
-        String username;
+        String username="";
         try {
             Claims claims = getClaimFromToken(token);
+            System.out.println("---------------");
+            System.out.println(claims);
             username = claims.getSubject();
+            System.out.println(username);
+            System.out.println("---------------");
         } catch (Exception e) {
             username = null;
         }
@@ -51,7 +55,7 @@ public class JwtTokenUtil {
 
     //判断token是否被刷新,过期即可刷新
     public boolean canRefresh(String token){
-        return !isTokenExpired(token);
+        return isTokenExpired(token);
     }
 
     //刷新token
@@ -64,13 +68,13 @@ public class JwtTokenUtil {
     //验证token是否有效
     public boolean validateToken(String token, UserDetails userDetails) {
         String username = getUserNameFromToken(token);
-        return username.equals(userDetails.getUsername()) && !isTokenExpired(token);
+        return username.equals(userDetails.getUsername()) && isTokenExpired(token);
     }
 
     //判断token是否失效
     private boolean isTokenExpired(String token) {
         Date expired = getExpiredDateFromToken(token);
-        return expired.before(new Date());
+        return !expired.before(new Date());
     }
 
     //从token获取荷载时间
@@ -85,9 +89,9 @@ public class JwtTokenUtil {
         try {
             claims = Jwts.parser()
                     .setSigningKey(secret)
-                    .parseClaimsJwt(token)
+                    .parseClaimsJws(token)//注意paresClaimsJws
                     .getBody();
-        } catch (ExpiredJwtException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return claims;

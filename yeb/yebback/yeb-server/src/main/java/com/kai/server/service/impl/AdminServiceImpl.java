@@ -4,9 +4,11 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.kai.server.config.security.JwtTokenUtil;
 import com.kai.server.pojo.Admin;
 import com.kai.server.mapper.AdminMapper;
+import com.kai.server.pojo.Menu;
 import com.kai.server.pojo.RespBean;
 import com.kai.server.service.IAdminService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.mysql.cj.util.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -16,8 +18,10 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -31,20 +35,27 @@ import java.util.Map;
 @Service
 public class AdminServiceImpl extends ServiceImpl<AdminMapper, Admin> implements IAdminService {
 
-    @Autowired
+    @Resource
     private AdminMapper adminMapper;
-    @Autowired
+    @Resource
     private UserDetailsService userDetailsService;
-    @Autowired
+    @Resource
     private PasswordEncoder passwordEncoder;
-    @Autowired
+    @Resource
     private JwtTokenUtil jwtTokenUtil;
     @Value("${jwt.tokenHead}")
     private String tokenHead;
 
     //登录之后返回token
     @Override
-    public RespBean login(String username, String password, HttpServletRequest request) {
+    public RespBean login(String username, String password, String code,HttpServletRequest request) {
+
+        //验证码校验
+        String captcha = (String) request.getSession().getAttribute("captcha");
+        if(StringUtils.isNullOrEmpty(code) || !captcha.equalsIgnoreCase(code)){
+            return RespBean.error("验证码错误,请重新输入");
+        }
+
         //登录
         UserDetails userDetails = userDetailsService.loadUserByUsername(username);
         if (null == userDetails || !passwordEncoder.matches(password, userDetails.getPassword())) {
@@ -60,9 +71,11 @@ public class AdminServiceImpl extends ServiceImpl<AdminMapper, Admin> implements
 
         //生成token
         String token = jwtTokenUtil.generateToken(userDetails);
-        Map<String, String> tokenMap = new HashMap<>();
+        Map<String, Object> tokenMap = new HashMap<>();
         tokenMap.put("token", token);
         tokenMap.put("tokenHead", tokenHead);
+
+        System.out.println(token);
 
         return RespBean.success("登录成功", tokenMap);
     }
@@ -74,4 +87,6 @@ public class AdminServiceImpl extends ServiceImpl<AdminMapper, Admin> implements
                 .eq("username",username)
                 .eq("enabled",true));
     }
+
+
 }
