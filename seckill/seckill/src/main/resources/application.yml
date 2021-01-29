@@ -1,3 +1,4 @@
+
 spring:
   # thymeleaf 配置
   thymeleaf:
@@ -25,6 +26,28 @@ spring:
       # 测试连接是否可用的查询语句
       connection-test-query: SELECT 1
 
+  # redis 配置
+  redis:
+    # 虚拟机地址
+    host: 192.168.64.137
+    # 端口号,默认6379
+    port: 5002
+    # 操作数据库,默认0库
+    database: 0
+    # 连接超时时间
+    timeout: 10000ms
+    lettuce:
+      pool:
+        # 最大连接数,默认8
+        max-active: 8
+        # 最大连接阻塞等待时间,默认-1
+        max-wait: 10000ms
+        # 最大空闲连接,默认8
+        max-idle: 200
+        # 最小空闲连接,默认0
+        min-idle: 0
+
+
 # Mybatis-plus配置
 mybatis-plus:
   # 配置Mapper.xml映射文件
@@ -36,3 +59,5 @@ mybatis-plus:
 logging:
   level:
     com.kai.seckill.mapper: debug
+server:
+  port: 8088

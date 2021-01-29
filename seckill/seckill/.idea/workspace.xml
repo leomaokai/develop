@@ -5,36 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="89b83c7b-168c-4bdb-bc62-4c33a34369a6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../yeb/yebback/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../yeb/yebback/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../yeb/yebback/.idea/libraries/Maven__com_google_guava_guava_20_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../yeb/yebback/.idea/libraries/Maven__io_springfox_springfox_core_2_9_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../yeb/yebback/.idea/libraries/Maven__io_springfox_springfox_schema_2_9_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../yeb/yebback/.idea/libraries/Maven__io_springfox_springfox_spi_2_9_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../yeb/yebback/.idea/libraries/Maven__io_springfox_springfox_spring_web_2_9_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../yeb/yebback/.idea/libraries/Maven__io_springfox_springfox_swagger2_2_9_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../yeb/yebback/.idea/libraries/Maven__io_springfox_springfox_swagger_common_2_9_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../yeb/yebback/.idea/libraries/Maven__io_swagger_swagger_annotations_1_5_20.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../yeb/yebback/.idea/libraries/Maven__io_swagger_swagger_models_1_5_20.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../yeb/yebback/.idea/libraries/Maven__org_mapstruct_mapstruct_1_2_0_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../yeb/yebback/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../yeb/yebback/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/src/main/java/com/kai/YebApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/src/main/java/com/kai/server/YebApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/src/main/java/com/kai/server/config/security/JwtAuthenticationTokenFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/src/main/java/com/kai/server/config/security/JwtAuthenticationTokenFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/src/main/java/com/kai/server/config/security/JwtTokenUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/src/main/java/com/kai/server/config/security/JwtTokenUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/src/main/java/com/kai/server/config/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/src/main/java/com/kai/server/config/security/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/src/main/java/com/kai/server/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/src/main/java/com/kai/server/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/src/main/java/com/kai/server/controller/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/src/main/java/com/kai/server/controller/MenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/src/main/java/com/kai/server/mapper/AdminMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/src/main/java/com/kai/server/mapper/AdminMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/src/main/java/com/kai/server/mapper/MenuMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/src/main/java/com/kai/server/mapper/MenuMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/src/main/java/com/kai/server/pojo/AdminLoginParam.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/src/main/java/com/kai/server/pojo/AdminLoginParam.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/src/main/java/com/kai/server/pojo/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/src/main/java/com/kai/server/pojo/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/src/main/java/com/kai/server/service/IAdminService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/src/main/java/com/kai/server/service/IAdminService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/src/main/java/com/kai/server/service/IMenuService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/src/main/java/com/kai/server/service/IMenuService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/src/main/java/com/kai/server/service/impl/AdminServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/src/main/java/com/kai/server/service/impl/AdminServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/src/main/java/com/kai/server/service/impl/MenuServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/src/main/java/com/kai/server/service/impl/MenuServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/src/main/resources/mapper/AdminMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/src/main/resources/mapper/AdminMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/src/main/resources/mapper/MenuMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/src/main/resources/mapper/MenuMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/yeb-server.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/yeb-server.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../readme.assets/image-20210128211753263.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seckill.iml" beforeDir="false" afterPath="$PROJECT_DIR$/seckill.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kai/seckill/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kai/seckill/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kai/seckill/service/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kai/seckill/service/IUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kai/seckill/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kai/seckill/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kai/seckill/utils/MD5Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kai/seckill/utils/MD5Utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/kai/seckill/utils/MD5Utils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kai/seckill/utils/MD5Utils.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +27,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="AnnotationType" />
         <option value="HTML File" />
         <option value="Class" />
       </list>
@@ -73,26 +57,24 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\LEOMESSI\Desktop\develop\seckill\seckill\src\main\resources" />
-      <recent name="C:\Users\LEOMESSI\Desktop\develop\seckill\seckill\src\main\java\com\kai\seckill" />
+      <recent name="C:\Users\LEOMESSI\Desktop\develop\seckill\seckill\src\main\resources\mapper" />
+      <recent name="C:\Users\LEOMESSI\Desktop\develop\seckill\seckill\src\main\java\com\kai\seckill\service\impl" />
+      <recent name="C:\Users\LEOMESSI\Desktop\develop\seckill\seckill\src\main\java\com\kai\seckill\service" />
+      <recent name="C:\Users\LEOMESSI\Desktop\develop\seckill\seckill\src\main\java\com\kai\seckill\pojo" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.kai.seckill" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MD5Utils.test">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Spring Boot.SeckillApplication">
     <configuration name="MD5Utils.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="seckill" />
       <extension name="coverage">
@@ -131,6 +113,9 @@
       <option name="presentableId" value="Default" />
       <updated>1611841807581</updated>
       <workItem from="1611841808816" duration="5181000" />
+      <workItem from="1611893079324" duration="24620000" />
+      <workItem from="1611928735215" duration="1128000" />
+      <workItem from="1611929880912" duration="1234000" />
     </task>
     <servers />
   </component>
@@ -147,5 +132,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

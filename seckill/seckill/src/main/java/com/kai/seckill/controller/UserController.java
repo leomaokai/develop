@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @since 2021-01-28
  */
 @Controller
-@RequestMapping("//user")
+@RequestMapping("/user")
 public class UserController {
 
 }
