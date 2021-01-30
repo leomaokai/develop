@@ -31,6 +31,7 @@ public final class CookieUtil {
      */
     public static String getCookieValue(HttpServletRequest request, String cookieName, boolean isDecoder) {
         Cookie[] cookieList = request.getCookies();
+        System.out.println("getCookie=cookieList=>"+cookieList);
         if (cookieList == null || cookieName == null) {
             return null;
         }
@@ -49,6 +50,7 @@ public final class CookieUtil {
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }
+        System.out.println("getCookie=retValue=>"+retValue);
         return retValue;
     }
 
@@ -143,10 +145,13 @@ public final class CookieUtil {
             if (cookieMaxage > 0)
                 cookie.setMaxAge(cookieMaxage);
             if (null != request) {// 设置域名的cookie
+
+                // 如果部署到服务器,域名截取有错误,手动添加192使其正确
                 String domainName = getDomainName(request);
                 System.out.println(domainName);
                 if (!"localhost".equals(domainName)) {
-                    cookie.setDomain(domainName);
+                    // cookie.setDomain(domainName);
+                    cookie.setDomain("192"+domainName);
                 }
             }
             cookie.setPath("/");

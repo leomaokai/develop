@@ -56,6 +56,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
 //        }
         // 根据手机号查用户
         User user = userMapper.selectById(mobile);
+        System.out.println("userMapper==>"+user);
         if(user==null){
             //return RespBean.error(RespBeanEnum.LOGIN_ERROR);
             throw new GlobalException(RespBeanEnum.LOGIN_ERROR);
@@ -73,7 +74,8 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
         // request.getSession().setAttribute(ticket,user);
 
         // 将信息存放到redis中
-        redisTemplate.opsForValue().set("user"+ticket,user);
+        redisTemplate.opsForValue().set("user:"+ticket,user);
+        System.out.println("toRedis:user"+ticket);
 
         CookieUtil.setCookie(request,response,"userTicket",ticket);
 
@@ -87,10 +89,28 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
             return null;
         }
 
-        User user = (User) redisTemplate.opsForValue().get("user" + userTicket);
+        User user = (User) redisTemplate.opsForValue().get("user:" + userTicket);
         if (user!=null){
             CookieUtil.setCookie(request,response,"userTicket",userTicket);
         }
         return user;
+    }
+
+    // 更新密码
+    @Override
+    public RespBean updatePassword(String userTicket, String password,HttpServletRequest request,HttpServletResponse response) {
+
+        User user = getUserByCookie(userTicket, request, response);
+        if(user==null){
+            throw new GlobalException(RespBeanEnum.MOBILE_NOT);
+        }
+        user.setPassword(MD5Utils.inputPassToDBPass(password,user.getSlat()));
+        int i = userMapper.updateById(user);
+        if(1==i){
+            // 删除redis
+            redisTemplate.delete("user"+userTicket);
+            return RespBean.success();
+        }
+        return RespBean.error(RespBeanEnum.UPDATE_ERROR);
     }
 }

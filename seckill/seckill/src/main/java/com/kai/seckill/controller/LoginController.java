@@ -1,11 +1,14 @@
 package com.kai.seckill.controller;
 
 
+import com.kai.seckill.pojo.User;
 import com.kai.seckill.service.IUserService;
+import com.kai.seckill.utils.CookieUtil;
 import com.kai.seckill.vo.LoginVo;
 import com.kai.seckill.vo.RespBean;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -22,13 +25,20 @@ public class LoginController {
     @Autowired
     private IUserService userService;
 
+    @Autowired
+    private RedisTemplate redisTemplate;
+
     /**
      * 跳转登录页面
      * @return
      */
     @RequestMapping("/toLogin")
-    public String toLogin(){
+    public String toLogin(User user){
         System.out.println("tologin");
+        if(user!=null){
+            return "redirect:/goods/toList";
+        }
+
         return "login";
     }
 
