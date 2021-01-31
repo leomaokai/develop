@@ -32,12 +32,18 @@ public class LoginController {
      * 跳转登录页面
      * @return
      */
+//    @RequestMapping("/toLogin")
+//    public String toLogin(User user){
+//        System.out.println("tologin");
+//        if(user!=null){
+//            return "redirect:/goods/toList";
+//        }
+//
+//        return "login";
+//    }
     @RequestMapping("/toLogin")
-    public String toLogin(User user){
+    public String toLogin(){
         System.out.println("tologin");
-        if(user!=null){
-            return "redirect:/goods/toList";
-        }
 
         return "login";
     }

@@ -10,6 +10,7 @@ import com.kai.seckill.service.IOrderService;
 import com.kai.seckill.service.ISeckillOrderService;
 import com.kai.seckill.vo.GoodsVo;
 import com.kai.seckill.vo.RespBeanEnum;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -30,6 +31,9 @@ public class SecKillController {
     @Resource
     private IOrderService orderService;
 
+    @Resource
+    private RedisTemplate redisTemplate;
+
 
     @RequestMapping("/doSecKill")
     public String daSecKill(Model model, User user, Long goodsId){
@@ -45,10 +49,16 @@ public class SecKillController {
             model.addAttribute("errmsg", RespBeanEnum.EMPTY_STOCK.getMessage());
             return "secKillFail";
         }
+//        // 判断是否重复抢购
+//        SeckillOrder one = seckillOrderService.getOne(new QueryWrapper<SeckillOrder>().eq("user_id", user.getId()).eq("goods_id", goodsId));
+//        if(one!=null){
+//            model.addAttribute("errmsg",RespBeanEnum.REPEAT_ERROR.getMessage());
+//            return "secKillFail";
+//        }
         // 判断是否重复抢购
-        SeckillOrder one = seckillOrderService.getOne(new QueryWrapper<SeckillOrder>().eq("user_id", user.getId()).eq("goods_id", goodsId));
-        if(one!=null){
-            model.addAttribute("errmsg",RespBeanEnum.REPEAT_ERROR.getMessage());
+        SeckillOrder seckillOrder = (SeckillOrder) redisTemplate.opsForValue().get("order:" + user.getId() + ":" + goodsId);
+        if(seckillOrder!=null){
+            model.addAttribute("errmsg", RespBeanEnum.REPEAT_ERROR.getMessage());
             return "secKillFail";
         }
         // 抢购
