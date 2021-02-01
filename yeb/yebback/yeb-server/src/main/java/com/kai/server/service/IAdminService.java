@@ -4,6 +4,7 @@ import com.kai.server.pojo.Admin;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.kai.server.pojo.Menu;
 import com.kai.server.pojo.RespBean;
+import com.kai.server.pojo.Role;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
@@ -18,11 +19,12 @@ import java.util.List;
  */
 public interface IAdminService extends IService<Admin> {
 
-    //登录之后返回token
+    // 登录之后返回token
     RespBean login(String username, String password, String code,HttpServletRequest request);
 
-    //根据用户名获取用户
+    // 根据用户名获取用户
     Admin getAdminByUserName(String username);
 
-
+    // 获取所有操作员
+    List<Admin> getAllAdmins(String keywords);
 }

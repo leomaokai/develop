@@ -1,21 +1,28 @@
 package com.kai.server.pojo;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
+
 import java.io.Serializable;
 import java.util.Collection;
+import java.util.List;
+import java.util.stream.Collectors;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import lombok.AccessLevel;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.Getter;
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 /**
  * <p>
- * 
+ *
  * </p>
  *
  * @author kai
@@ -24,8 +31,8 @@ import org.springframework.security.core.userdetails.UserDetails;
 @Data
 @EqualsAndHashCode(callSuper = false)
 @TableName("t_admin")
-@ApiModel(value="Admin对象", description="")
-public class Admin implements Serializable , UserDetails {
+@ApiModel(value = "Admin对象", description = "")
+public class Admin implements Serializable, UserDetails {
 
     private static final long serialVersionUID = 1L;
 
@@ -46,6 +53,7 @@ public class Admin implements Serializable , UserDetails {
     private String address;
 
     @ApiModelProperty(value = "是否启用")
+    @Getter(AccessLevel.NONE)
     private Boolean enabled;
 
     @ApiModelProperty(value = "用户名")
@@ -60,10 +68,18 @@ public class Admin implements Serializable , UserDetails {
     @ApiModelProperty(value = "备注")
     private String remark;
 
+    @ApiModelProperty(value = "角色")
+    @TableField(exist = false)
+    private List<Role> roles;
+
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return null;
+        List<SimpleGrantedAuthority> authorities = roles.
+                stream()
+                .map(role -> new SimpleGrantedAuthority(role.getName()))
+                .collect(Collectors.toList());
+        return authorities;
     }
 
     @Override

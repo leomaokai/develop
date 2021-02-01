@@ -1,4 +1,4 @@
-package com.kai.server.config.security;
+package com.kai.server.config.security.component;
 
 
 import org.springframework.beans.factory.annotation.Autowired;

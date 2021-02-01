@@ -1,19 +1,23 @@
 package com.kai.server.config.security;
 
 
+import com.kai.server.config.security.component.*;
 import com.kai.server.pojo.Admin;
 import com.kai.server.service.IAdminService;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.kai.server.service.IRoleService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.ObjectPostProcessor;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.access.intercept.FilterSecurityInterceptor;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 import javax.annotation.Resource;
@@ -28,6 +32,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     private RestAuthorizationEntryPoint restAuthorizationEntryPoint;
     @Resource
     private RestfulAccessDeniedHandler restfulAccessDeniedHandler;
+    @Resource
+    private CustomFilter customFilter;
+    @Resource
+    private CustomUrlDecisionManager customUrlDecisionManager;
+    @Resource
+    private IRoleService roleService;
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
@@ -63,6 +73,15 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 //所有请求都要认证
                 .anyRequest()
                 .authenticated()
+                .withObjectPostProcessor(new ObjectPostProcessor<FilterSecurityInterceptor>() {
+                    // 动态权限控制
+                    @Override
+                    public <O extends FilterSecurityInterceptor> O postProcess(O object) {
+                        object.setAccessDecisionManager(customUrlDecisionManager);
+                        object.setSecurityMetadataSource(customFilter);
+                        return object;
+                    }
+                })
                 .and()
                 //禁用缓存
                 .headers()
@@ -83,9 +102,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         return username -> {
             Admin admin = adminService.getAdminByUserName(username);
             if (admin != null) {
+                admin.setRoles(roleService.getRoles(admin.getId()));
                 return admin;
             }
-            return null;
+            // return null;
+            throw new UsernameNotFoundException("用户名或密码不正确");
         };
     }
 

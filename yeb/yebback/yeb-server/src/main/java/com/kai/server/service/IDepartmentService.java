@@ -2,6 +2,9 @@ package com.kai.server.service;
 
 import com.kai.server.pojo.Department;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.kai.server.pojo.RespBean;
+
+import java.util.List;
 
 /**
  * <p>
@@ -13,4 +16,9 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface IDepartmentService extends IService<Department> {
 
+    List<Department> getAllDepartments();
+
+    RespBean addDep(Department dep);
+
+    RespBean deleteDep(Integer id);
 }

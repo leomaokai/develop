@@ -5,116 +5,47 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="89b83c7b-168c-4bdb-bc62-4c33a34369a6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../config.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seckill.iml" beforeDir="false" afterPath="$PROJECT_DIR$/seckill.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kai/seckill/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kai/seckill/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kai/seckill/controller/SecKillController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kai/seckill/controller/SecKillController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kai/seckill/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kai/seckill/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kai/seckill/service/impl/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kai/seckill/service/impl/OrderServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kai/seckill/SeckillApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kai/seckill/config/RedisConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kai/seckill/config/UserArgumentResolvers.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kai/seckill/config/WebConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kai/seckill/controller/GoodsController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kai/seckill/controller/LoginController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kai/seckill/controller/OrderController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kai/seckill/controller/SecKillController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kai/seckill/controller/SeckillGoodsController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kai/seckill/controller/SeckillOrderController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kai/seckill/controller/TestController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kai/seckill/controller/UserController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kai/seckill/exception/GlobalException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kai/seckill/exception/GlobalExceptionHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kai/seckill/mapper/GoodsMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kai/seckill/mapper/OrderMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kai/seckill/mapper/SeckillGoodsMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kai/seckill/mapper/SeckillOrderMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kai/seckill/mapper/UserMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kai/seckill/pojo/Goods.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kai/seckill/pojo/Order.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kai/seckill/pojo/SeckillGoods.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kai/seckill/pojo/SeckillOrder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kai/seckill/pojo/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kai/seckill/service/IGoodsService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kai/seckill/service/IOrderService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kai/seckill/service/ISeckillGoodsService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kai/seckill/service/ISeckillOrderService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kai/seckill/service/IUserService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kai/seckill/service/impl/GoodsServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kai/seckill/service/impl/OrderServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kai/seckill/service/impl/SeckillGoodsServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kai/seckill/service/impl/SeckillOrderServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kai/seckill/service/impl/UserServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kai/seckill/utils/CookieUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kai/seckill/utils/MD5Utils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kai/seckill/utils/UUIDUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kai/seckill/utils/ValidatorUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kai/seckill/validator/IsMobile.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kai/seckill/vo/DetailVo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kai/seckill/vo/GoodsVo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kai/seckill/vo/IsMobileValidator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kai/seckill/vo/LoginVo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kai/seckill/vo/RespBean.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kai/seckill/vo/RespBeanEnum.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/GoodsMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/OrderMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/SeckillGoodsMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/SeckillOrderMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/UserMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/bootstrap/css/bootstrap-theme.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/bootstrap/css/bootstrap-theme.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/bootstrap/css/bootstrap-theme.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/bootstrap/css/bootstrap-theme.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/bootstrap/css/bootstrap.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/bootstrap/css/bootstrap.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/bootstrap/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/bootstrap/css/bootstrap.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/bootstrap/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/bootstrap/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/bootstrap/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/bootstrap/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/bootstrap/fonts/glyphicons-halflings-regular.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/bootstrap/js/bootstrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/bootstrap/js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/bootstrap/js/npm.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/goodsDetail.htm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/iphone12.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/iphone12pro.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/jquery-validation/additional-methods.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/jquery-validation/jquery.validate.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/jquery-validation/localization/messages_zh.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/common.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/jquery.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/md5.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/layer/layer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/layer/mobile/layer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/layer/mobile/need/layer.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/layer/skin/default/icon-ext.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/layer/skin/default/icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/layer/skin/default/layer.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/layer/skin/default/loading-0.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/layer/skin/default/loading-1.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/layer/skin/default/loading-2.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/goodsDetail.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/goodsList.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/hello.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/orderDetail.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/secKillFail.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/seckill-0.0.1-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/seckill-0.0.1-SNAPSHOT.jar.original" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.kai.seckill.SeckillApplicationTests.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.kai.seckill.SeckillApplicationTests.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/kai/seckill/SeckillApplicationTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../yeb/yebback/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../yeb/yebback/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/src/main/java/com/kai/server/config/security/JwtAuthenticationTokenFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/src/main/java/com/kai/server/config/security/component/JwtAuthenticationTokenFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/src/main/java/com/kai/server/config/security/JwtTokenUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/src/main/java/com/kai/server/config/security/component/JwtTokenUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/src/main/java/com/kai/server/config/security/RestAuthorizationEntryPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/src/main/java/com/kai/server/config/security/component/RestAuthorizationEntryPoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/src/main/java/com/kai/server/config/security/RestfulAccessDeniedHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/src/main/java/com/kai/server/config/security/component/RestfulAccessDeniedHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/src/main/java/com/kai/server/config/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/src/main/java/com/kai/server/config/security/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/src/main/java/com/kai/server/controller/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/src/main/java/com/kai/server/controller/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/src/main/java/com/kai/server/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/src/main/java/com/kai/server/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/src/main/java/com/kai/server/mapper/MenuMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/src/main/java/com/kai/server/mapper/MenuMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/src/main/java/com/kai/server/mapper/RoleMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/src/main/java/com/kai/server/mapper/RoleMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/src/main/java/com/kai/server/pojo/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/src/main/java/com/kai/server/pojo/Admin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/src/main/java/com/kai/server/pojo/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/src/main/java/com/kai/server/pojo/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/src/main/java/com/kai/server/pojo/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/src/main/java/com/kai/server/pojo/Position.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/src/main/java/com/kai/server/service/IAdminService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/src/main/java/com/kai/server/service/IAdminService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/src/main/java/com/kai/server/service/IMenuService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/src/main/java/com/kai/server/service/IMenuService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/src/main/java/com/kai/server/service/impl/AdminServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/src/main/java/com/kai/server/service/impl/AdminServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/src/main/java/com/kai/server/service/impl/MenuServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/src/main/java/com/kai/server/service/impl/MenuServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/src/main/resources/config/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/src/main/resources/config/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/src/main/resources/mapper/MenuMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/src/main/resources/mapper/MenuMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/src/main/resources/mapper/RoleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/src/main/resources/mapper/RoleMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/target/classes/com/kai/server/config/security/JwtAuthenticationTokenFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/target/classes/com/kai/server/config/security/JwtTokenUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/target/classes/com/kai/server/config/security/RestAuthorizationEntryPoint.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/target/classes/com/kai/server/config/security/RestfulAccessDeniedHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/target/classes/com/kai/server/config/security/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/target/classes/com/kai/server/config/security/SecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/target/classes/com/kai/server/controller/HelloController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/target/classes/com/kai/server/controller/HelloController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/target/classes/com/kai/server/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/target/classes/com/kai/server/controller/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/target/classes/com/kai/server/controller/MenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/target/classes/com/kai/server/controller/MenuController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/target/classes/com/kai/server/mapper/MenuMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/target/classes/com/kai/server/mapper/MenuMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/target/classes/com/kai/server/mapper/RoleMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/target/classes/com/kai/server/mapper/RoleMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/target/classes/com/kai/server/pojo/Admin.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/target/classes/com/kai/server/pojo/Admin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/target/classes/com/kai/server/pojo/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/target/classes/com/kai/server/pojo/Menu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/target/classes/com/kai/server/service/IAdminService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/target/classes/com/kai/server/service/IAdminService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/target/classes/com/kai/server/service/IMenuService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/target/classes/com/kai/server/service/IMenuService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/target/classes/com/kai/server/service/impl/AdminServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/target/classes/com/kai/server/service/impl/AdminServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/target/classes/com/kai/server/service/impl/MenuServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/target/classes/com/kai/server/service/impl/MenuServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/target/classes/config/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/target/classes/config/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/target/classes/mapper/MenuMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/target/classes/mapper/MenuMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/target/classes/mapper/RoleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../yeb/yebback/yeb-server/target/classes/mapper/RoleMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -243,6 +174,8 @@
       <workItem from="1611976143246" duration="7785000" />
       <workItem from="1611991062128" duration="23944000" />
       <workItem from="1612062987285" duration="15175000" />
+      <workItem from="1612147555187" duration="141000" />
+      <workItem from="1612155988140" duration="35000" />
     </task>
     <servers />
   </component>

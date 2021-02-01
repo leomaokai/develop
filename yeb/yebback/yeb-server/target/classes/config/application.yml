@@ -1,5 +1,5 @@
 server:
-  port: 8081
+  port: 8087
 
 spring:
   datasource:
@@ -24,6 +24,29 @@ spring:
       connection-timeout: 30000
       # 测试连接是否可用的查询语句
       connection-test-query: SELECT 1
+
+  # redis 配置
+  redis:
+    # 超时时间
+    timeout: 10000ms
+    # 服务地址
+    host: 192.168.64.137
+    # 服务端口
+    port: 5002
+    # 数据库
+    database: 1
+    lettuce:
+      pool:
+        # 最小空闲连接
+        min-idle: 5
+        # 最大连接数
+        max-active: 1024
+        # 最大连接阻塞时间
+        max-wait: 10000ms
+        # 最大空闲连接
+        max-idle: 200
+
+
 
 # mybatis-plus配置
 mybatis-plus:

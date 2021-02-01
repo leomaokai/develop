@@ -1,15 +1,16 @@
 package com.kai.server.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.kai.server.config.security.JwtTokenUtil;
+import com.kai.server.Utils.AdminUtils;
+import com.kai.server.config.security.component.JwtTokenUtil;
+import com.kai.server.mapper.RoleMapper;
 import com.kai.server.pojo.Admin;
 import com.kai.server.mapper.AdminMapper;
-import com.kai.server.pojo.Menu;
 import com.kai.server.pojo.RespBean;
+import com.kai.server.pojo.Role;
 import com.kai.server.service.IAdminService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.mysql.cj.util.StringUtils;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -46,6 +47,9 @@ public class AdminServiceImpl extends ServiceImpl<AdminMapper, Admin> implements
     @Value("${jwt.tokenHead}")
     private String tokenHead;
 
+    @Resource
+    private RoleMapper roleMapper;
+
     //登录之后返回token
     @Override
     public RespBean login(String username, String password, String code,HttpServletRequest request) {
@@ -80,12 +84,17 @@ public class AdminServiceImpl extends ServiceImpl<AdminMapper, Admin> implements
         return RespBean.success("登录成功", tokenMap);
     }
 
-    //根据用户名获取用户
+    // 根据用户名获取用户
     @Override
     public Admin getAdminByUserName(String username) {
         return adminMapper.selectOne(new QueryWrapper<Admin>()
                 .eq("username",username)
                 .eq("enabled",true));
+    }
+
+    @Override
+    public List<Admin> getAllAdmins(String keywords) {
+        return adminMapper.getAllAdmins(AdminUtils.getCurrentAdmin().getId(),keywords);
     }
 
 

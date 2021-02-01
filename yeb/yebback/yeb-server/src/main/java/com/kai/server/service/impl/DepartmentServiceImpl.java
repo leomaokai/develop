@@ -2,9 +2,13 @@ package com.kai.server.service.impl;
 
 import com.kai.server.pojo.Department;
 import com.kai.server.mapper.DepartmentMapper;
+import com.kai.server.pojo.RespBean;
 import com.kai.server.service.IDepartmentService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
+
+import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * <p>
@@ -17,4 +21,37 @@ import org.springframework.stereotype.Service;
 @Service
 public class DepartmentServiceImpl extends ServiceImpl<DepartmentMapper, Department> implements IDepartmentService {
 
+    @Resource
+    private DepartmentMapper departmentMapper;
+    @Override
+    public List<Department> getAllDepartments() {
+        return departmentMapper.getAllDepartments(-1);
+    }
+
+    @Override
+    public RespBean addDep(Department dep) {
+        dep.setEnabled(true);
+        departmentMapper.addDep(dep);
+        if(1==dep.getResult()){
+            return RespBean.success("添加成功",dep);
+        }
+        return RespBean.error("添加失败");
+    }
+
+    @Override
+    public RespBean deleteDep(Integer id) {
+        Department department = new Department();
+        department.setId(id);
+        departmentMapper.deleteDep(department);
+        if(department.getResult()==-2) {
+            return RespBean.error("该部门下还有子部门,删除失败");
+        }
+        if(department.getResult()==-1){
+            return RespBean.error("该部门下还有员工,删除失败");
+        }
+        if(department.getResult()==1){
+            return RespBean.success("删除成功");
+        }
+        return RespBean.error("删除失败");
+    }
 }
