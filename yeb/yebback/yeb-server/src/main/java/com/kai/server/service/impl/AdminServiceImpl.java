@@ -3,11 +3,12 @@ package com.kai.server.service.impl;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.kai.server.Utils.AdminUtils;
 import com.kai.server.config.security.component.JwtTokenUtil;
+import com.kai.server.mapper.AdminRoleMapper;
 import com.kai.server.mapper.RoleMapper;
 import com.kai.server.pojo.Admin;
 import com.kai.server.mapper.AdminMapper;
-import com.kai.server.pojo.RespBean;
-import com.kai.server.pojo.Role;
+import com.kai.server.pojo.AdminRole;
+import com.kai.server.Utils.RespBean;
 import com.kai.server.service.IAdminService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.mysql.cj.util.StringUtils;
@@ -18,6 +19,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -49,6 +51,8 @@ public class AdminServiceImpl extends ServiceImpl<AdminMapper, Admin> implements
 
     @Resource
     private RoleMapper roleMapper;
+    @Resource
+    private AdminRoleMapper adminRoleMapper;
 
     //登录之后返回token
     @Override
@@ -95,6 +99,18 @@ public class AdminServiceImpl extends ServiceImpl<AdminMapper, Admin> implements
     @Override
     public List<Admin> getAllAdmins(String keywords) {
         return adminMapper.getAllAdmins(AdminUtils.getCurrentAdmin().getId(),keywords);
+    }
+
+    @Override
+    @Transactional
+    public RespBean updateAdminRole(Integer adminId, Integer[] rids) {
+
+        adminRoleMapper.delete(new QueryWrapper<AdminRole>().eq("adminId",adminId));
+        Integer result = adminRoleMapper.addAdminRole(adminId, rids);
+        if(rids.length==result){
+            return RespBean.success("更新角色成功");
+        }
+        return RespBean.error("更新失败");
     }
 
 

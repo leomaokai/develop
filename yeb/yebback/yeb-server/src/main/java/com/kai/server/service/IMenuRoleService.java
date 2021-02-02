@@ -2,7 +2,7 @@ package com.kai.server.service;
 
 import com.kai.server.pojo.MenuRole;
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.kai.server.pojo.RespBean;
+import com.kai.server.Utils.RespBean;
 
 /**
  * <p>

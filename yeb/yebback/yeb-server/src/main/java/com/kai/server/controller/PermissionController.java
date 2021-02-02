@@ -4,12 +4,11 @@ package com.kai.server.controller;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.kai.server.pojo.Menu;
 import com.kai.server.pojo.MenuRole;
-import com.kai.server.pojo.RespBean;
+import com.kai.server.Utils.RespBean;
 import com.kai.server.pojo.Role;
 import com.kai.server.service.IMenuRoleService;
 import com.kai.server.service.IMenuService;
 import com.kai.server.service.IRoleService;
-import io.swagger.annotations.ApiModelProperty;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.*;
 

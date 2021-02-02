@@ -1,7 +1,7 @@
 package com.kai.server.exception;
 
 
-import com.kai.server.pojo.RespBean;
+import com.kai.server.Utils.RespBean;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 

@@ -2,7 +2,7 @@ package com.kai.server.controller;
 
 
 import com.kai.server.pojo.Department;
-import com.kai.server.pojo.RespBean;
+import com.kai.server.Utils.RespBean;
 import com.kai.server.service.IDepartmentService;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.*;

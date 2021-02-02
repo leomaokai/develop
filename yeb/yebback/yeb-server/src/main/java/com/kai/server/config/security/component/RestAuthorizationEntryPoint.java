@@ -2,7 +2,7 @@ package com.kai.server.config.security.component;
 
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.kai.server.pojo.RespBean;
+import com.kai.server.Utils.RespBean;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.AuthenticationEntryPoint;
 import org.springframework.stereotype.Component;

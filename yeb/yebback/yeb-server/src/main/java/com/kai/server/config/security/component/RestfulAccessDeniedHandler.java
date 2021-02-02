@@ -2,7 +2,7 @@ package com.kai.server.config.security.component;
 
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.kai.server.pojo.RespBean;
+import com.kai.server.Utils.RespBean;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.security.web.access.AccessDeniedHandler;
 import org.springframework.stereotype.Component;

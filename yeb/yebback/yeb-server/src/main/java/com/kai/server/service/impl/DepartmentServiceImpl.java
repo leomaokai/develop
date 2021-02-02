@@ -2,7 +2,7 @@ package com.kai.server.service.impl;
 
 import com.kai.server.pojo.Department;
 import com.kai.server.mapper.DepartmentMapper;
-import com.kai.server.pojo.RespBean;
+import com.kai.server.Utils.RespBean;
 import com.kai.server.service.IDepartmentService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;

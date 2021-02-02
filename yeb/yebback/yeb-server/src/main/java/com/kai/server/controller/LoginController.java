@@ -3,7 +3,7 @@ package com.kai.server.controller;
 
 import com.kai.server.pojo.Admin;
 import com.kai.server.pojo.AdminLoginParam;
-import com.kai.server.pojo.RespBean;
+import com.kai.server.Utils.RespBean;
 import com.kai.server.service.IAdminService;
 import com.kai.server.service.IRoleService;
 import io.swagger.annotations.Api;

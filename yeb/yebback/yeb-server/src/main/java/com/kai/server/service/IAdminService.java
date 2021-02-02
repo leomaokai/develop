@@ -2,9 +2,7 @@ package com.kai.server.service;
 
 import com.kai.server.pojo.Admin;
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.kai.server.pojo.Menu;
-import com.kai.server.pojo.RespBean;
-import com.kai.server.pojo.Role;
+import com.kai.server.Utils.RespBean;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
@@ -27,4 +25,6 @@ public interface IAdminService extends IService<Admin> {
 
     // 获取所有操作员
     List<Admin> getAllAdmins(String keywords);
+
+    RespBean updateAdminRole(Integer adminId, Integer[] rids);
 }
