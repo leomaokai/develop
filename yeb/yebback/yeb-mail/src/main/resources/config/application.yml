@@ -10,7 +10,7 @@ spring:
     # 编码格式
     default-encoding: utf-8
     # 授权码
-    password: xftczyjifersdhgd
+    password:
     # 发送者邮箱地址
     username: 2570650250@qq.com
     # 端口
