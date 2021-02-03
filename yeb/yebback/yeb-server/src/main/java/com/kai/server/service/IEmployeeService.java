@@ -6,6 +6,7 @@ import com.kai.server.pojo.Employee;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 import java.time.LocalDate;
+import java.util.List;
 
 /**
  * <p>
@@ -23,4 +24,5 @@ public interface IEmployeeService extends IService<Employee> {
 
     RespBean addEmp(Employee employee);
 
+    List<Employee> getEmployee(Integer id);
 }
