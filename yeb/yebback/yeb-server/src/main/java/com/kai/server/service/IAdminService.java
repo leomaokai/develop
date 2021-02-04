@@ -3,6 +3,7 @@ package com.kai.server.service;
 import com.kai.server.pojo.Admin;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.kai.server.Utils.RespBean;
+import org.springframework.security.core.Authentication;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
@@ -27,4 +28,8 @@ public interface IAdminService extends IService<Admin> {
     List<Admin> getAllAdmins(String keywords);
 
     RespBean updateAdminRole(Integer adminId, Integer[] rids);
+
+    RespBean updateAdminPassword(String oldPass, String pass, Integer adminId);
+
+    RespBean updateAdminUserFace(String url, Integer id, Authentication authentication);
 }
