@@ -67,7 +67,7 @@ public class CodeGenerator {
 
 		// 数据源配置
 		DataSourceConfig dsc = new DataSourceConfig();
-		dsc.setUrl("jdbc:mysql://localhost:3306/yeb?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia" +
+		dsc.setUrl("jdbc:mysql://localhost:3306/check_code?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia" +
 				"/Shanghai");
 		dsc.setDriverName("com.mysql.cj.jdbc.Driver");
 		dsc.setUsername("root");
@@ -76,7 +76,7 @@ public class CodeGenerator {
 
 		// 包配置
 		PackageConfig pc = new PackageConfig();
-		pc.setParent("com.kai.server")
+		pc.setParent("com.kai.checkcode")
 				.setEntity("pojo")
 				.setMapper("mapper")
 				.setService("service")
@@ -122,7 +122,7 @@ public class CodeGenerator {
 		//数据库表映射到实体的命名策略
 		strategy.setNaming(NamingStrategy.underline_to_camel);
 		//数据库表字段映射到实体的命名策略
-		strategy.setColumnNaming(NamingStrategy.no_change);
+		strategy.setColumnNaming(NamingStrategy.underline_to_camel);
 		//lombok模型
 		strategy.setEntityLombokModel(true);
 		//生成 @RestController 控制器
@@ -130,7 +130,7 @@ public class CodeGenerator {
 		strategy.setInclude(scanner("表名，多个英文逗号分割").split(","));
 		strategy.setControllerMappingHyphenStyle(true);
 		//表前缀
-		strategy.setTablePrefix("t_");
+		//strategy.setTablePrefix("t_");
 		mpg.setStrategy(strategy);
 		mpg.setTemplateEngine(new FreemarkerTemplateEngine());
 		mpg.execute();

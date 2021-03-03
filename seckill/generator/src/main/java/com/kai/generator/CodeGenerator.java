@@ -49,12 +49,14 @@ public class CodeGenerator {
         globalConfig.setBaseColumnList(true);
         // 日期格式,采用Date
         globalConfig.setDateType(DateType.ONLY_DATE);
+        // 配置swagger
+        globalConfig.setSwagger2(true);
         autoGenerator.setGlobalConfig(globalConfig);
 
         // 数据源配置
         // 注意修改url
         DataSourceConfig dataSourceConfig = new DataSourceConfig();
-        dataSourceConfig.setUrl("jdbc:mysql://localhost:3306/seckill?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai");
+        dataSourceConfig.setUrl("jdbc:mysql://localhost:3306/check_data?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai");
         dataSourceConfig.setDriverName("com.mysql.cj.jdbc.Driver");
         dataSourceConfig.setUsername("root");
         dataSourceConfig.setPassword("123456");
@@ -63,7 +65,7 @@ public class CodeGenerator {
         //包配置
         //注意修改parent
         PackageConfig packageConfig = new PackageConfig();
-        packageConfig.setParent("com.kai.seckill")
+        packageConfig.setParent("com.kai.check")
                 .setEntity("pojo")
                 .setMapper("mapper")
                 .setService("service")
